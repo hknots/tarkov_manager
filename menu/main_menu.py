@@ -1,5 +1,4 @@
-from menu import Menu
-from selling_menu import SellingMenu
+from menu import Menu, SellingMenu
 
 
 class MainMenu(Menu):
