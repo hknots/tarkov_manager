@@ -1,9 +1,12 @@
-from menu.main_menu import MainMenu
+import multiprocessing
+
+from selling import Selling
+import time
 
 
 def main():
-    main_menu = MainMenu()
-    main_menu.choose()
+    test = Selling()
+    test.sell_all_items()
 
 
 if __name__ == "__main__":

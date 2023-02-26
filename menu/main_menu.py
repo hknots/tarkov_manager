@@ -13,7 +13,7 @@ class MainMenu(Menu):
     def get_option_actions(self):
         return {
             "1": self.selling_menu.choose,
-            "2": self.exit
+            "2": exit
         }
 
 

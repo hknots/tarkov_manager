@@ -1,4 +1,6 @@
 import os
+import keyboard
+import time
 
 
 class Menu:
@@ -16,17 +18,14 @@ class Menu:
             print(f"{key}: {self.options[key]}")
 
     def choose(self):
-        choice = None
+        self.display()
+        time.sleep(0.5)
         option_actions = self.get_option_actions()
-        while choice not in option_actions.keys():
-            self.display()
-            choice = input("Choice: ")
-            if choice in option_actions.keys():
+        while True:
+            choice = keyboard.read_key()
+            if choice in self.options.keys():
                 option_actions[choice]()
+                break
 
     def get_option_actions(self):
         return {}
-
-    @staticmethod
-    def exit():
-        exit()
